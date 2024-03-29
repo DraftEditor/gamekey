@@ -27,7 +27,7 @@ SPDX-License-Identifier: AGPL-3.0-only
 		<MarqueeText :duration="40">
 			<MkA v-for="instance in instances" :key="instance.id" :class="$style.federationInstance" :to="`/instance-info/${instance.host}`" behavior="window">
 				<!--<MkInstanceCardMini :instance="instance"/>-->
-				<img v-if="instance.iconUrl" class="icon" :src="getInstanceIcon(instance)" alt=""/>
+				<img v-if="instance.iconUrl" class="icon" :src="gameliaicon" alt=""/>
 				<span class="name _monospace">{{ instance.host }}</span>
 			</MkA>
 		</MarqueeText>
@@ -41,6 +41,7 @@ import * as Misskey from 'misskey-js';
 import XTimeline from './welcome.timeline.vue';
 import MarqueeText from '@/components/MkMarquee.vue';
 import MkFeaturedPhotos from '@/components/MkFeaturedPhotos.vue';
+import gameliaicon from '/client-assets/Gamelia_LOGO.png';
 import elpherlogo from '/client-assets/ELPHER-FAST.png';
 import { misskeyApi, misskeyApiGet } from '@/scripts/misskey-api.js';
 import MkVisitorDashboard from '@/components/MkVisitorDashboard.vue';
@@ -130,9 +131,9 @@ misskeyApiGet('federation/instances', {
 		}
 
 		> .misskey {
-			width: 140px;
+			width: 120px;
 			@media (max-width: 450px) {
-				width: 130px;
+				width: 110px;
 			}
 		}
 	}
