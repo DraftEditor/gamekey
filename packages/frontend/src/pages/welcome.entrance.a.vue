@@ -5,6 +5,7 @@ SPDX-License-Identifier: AGPL-3.0-only
 
 <template>
 <div v-if="meta" class="rsqzvsbo">
+	<MkFeaturedPhotos class="bg"/>
 	<XTimeline class="tl"/>
 	<div class="shape1"></div>
 	<div class="shape2"></div>
