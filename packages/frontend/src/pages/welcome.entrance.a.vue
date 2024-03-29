@@ -5,7 +5,8 @@ SPDX-License-Identifier: AGPL-3.0-only
 
 <template>
 <div v-if="meta" class="rsqzvsbo">
-	<MkFeaturedPhotos class="bg"/>
+	<div data-v-543f928f="" class="xrjGt bg" style="background-image: url(&quot;./join_bg.png&quot;);">
+                                </div>
 	<XTimeline class="tl"/>
 	<div class="shape1"></div>
 	<div class="shape2"></div>
@@ -103,7 +104,7 @@ misskeyApiGet('federation/instances', {
 		left: 0;
 		width: 100vw;
 		height: 100vh;
-		background: var(--accent);
+		background: #454545;
 		clip-path: polygon(0% 0%, 45% 0%, 20% 100%, 0% 100%);
 	}
 	> .shape2 {
@@ -112,7 +113,7 @@ misskeyApiGet('federation/instances', {
 		left: 0;
 		width: 100vw;
 		height: 100vh;
-		background: var(--accent);
+		background: #454545;
 		clip-path: polygon(0% 0%, 25% 0%, 35% 100%, 0% 100%);
 		opacity: 0.5;
 	}
