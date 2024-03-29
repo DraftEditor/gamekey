@@ -5,8 +5,6 @@ SPDX-License-Identifier: AGPL-3.0-only
 
 <template>
 <div v-if="meta" class="rsqzvsbo">
-	<div data-v-543f928f="" class="xrjGt bg" style="background-image: url(&quot;./join_bg.png&quot;);">
-                                </div>
 	<XTimeline class="tl"/>
 	<div class="shape1"></div>
 	<div class="shape2"></div>
