@@ -5,7 +5,7 @@ SPDX-License-Identifier: AGPL-3.0-only
 
 <template>
 <div v-if="meta" class="rsqzvsbo">
-	<div data-v-543f928f="" class="xrjGt bg" style="background-image: url(&quot;./join_bg.png&quot;);"></div>
+  <div data-v-543f928f="" class="xrjGt bg" :style="{ 'background-image': 'url(' + background + ')' }"></div>
 	<XTimeline class="tl"/>
 	<div class="shape1"></div>
 	<div class="shape2"></div>
@@ -43,6 +43,7 @@ import MarqueeText from '@/components/MkMarquee.vue';
 import MkFeaturedPhotos from '@/components/MkFeaturedPhotos.vue';
 import gameliaicon from '/client-assets/Gamelia_LOGO.webp';
 import elpherlogo from '/client-assets/ELPHER-FAST.png';
+import background from '/client-assets/join_bg.png';
 import { misskeyApi, misskeyApiGet } from '@/scripts/misskey-api.js';
 import MkVisitorDashboard from '@/components/MkVisitorDashboard.vue';
 import { getProxiedImageUrl } from '@/scripts/media-proxy.js';
