@@ -91,7 +91,7 @@ export function scroll(el: HTMLElement, options: ScrollToOptions | undefined) {
  * @param el Scroll container element
  * @param options Scroll options
  */
-export function scrollToBottom(el: HTMLElement, options: { behavior?: ScrollBehavior; } = {}) {
+export function scrollToTop(el: HTMLElement, options: { behavior?: ScrollBehavior; } = {}) {
 	scroll(el, { top: 0, ...options });
 }
 
@@ -101,7 +101,7 @@ export function scrollToBottom(el: HTMLElement, options: { behavior?: ScrollBeha
  * @param options Scroll options
  * @param container Scroll container element
  */
-export function scrollToTop(
+export function scrollToBottom(
 	el: HTMLElement,
 	options: ScrollToOptions = {},
 	container = getScrollContainer(el),
@@ -116,12 +116,12 @@ export function scrollToTop(
 	}
 }
 
-export function isBottomVisible(el: HTMLElement, tolerance = 1): boolean {
+export function isTopVisible(el: HTMLElement, tolerance = 1): boolean {
 	const scrollTop = getScrollPosition(el);
 	return scrollTop <= tolerance;
 }
 
-export function isTopVisible(el: HTMLElement, tolerance = 1, container = getScrollContainer(el)) {
+export function isBottomVisible(el: HTMLElement, tolerance = 1, container = getScrollContainer(el)) {
 	if (container) return el.scrollHeight <= container.clientHeight + Math.abs(container.scrollTop) + tolerance;
 	return el.scrollHeight <= window.innerHeight + window.scrollY + tolerance;
 }
