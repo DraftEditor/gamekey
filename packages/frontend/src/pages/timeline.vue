@@ -29,7 +29,7 @@ SPDX-License-Identifier: AGPL-3.0-only
 			</div>
 		</MkHorizontalSwipe>
 	</MkSpacer>
-	<template #header><MkPageHeader v-model:tab="src" :actions="headerActions" :tabs="$i ? headerTabs : headerTabsWhenNotLogin" :displayMyAvatar="true"/></template>
+
 </MkStickyContainer>
 </template>
 
